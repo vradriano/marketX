@@ -140,8 +140,7 @@ export default function Home() {
                 </Button>
               </CardActions>
             </Card>
-          </Grid>
-          
+          </Grid>   
         </Grid>
       </Container>
     </TemplateDefault>
