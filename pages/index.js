@@ -108,6 +108,23 @@ const Home = () => {
                 </Typography>
               </CardContent>
             </Card>
+          </Grid> 
+          <Grid item xs={12} sm={6} md={4}>
+            <Card>
+              <CardMedia
+                className={classes.cardmedia}
+                image={'https://source.unsplash.com/random'}
+                title="Título da Imagem"
+              />
+              <CardContent>
+                <Typography variant="h5" component="h2">
+                  Produto X
+                </Typography>
+                <Typography>
+                  60 Reais
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>   
         </Grid>
       </Container>
