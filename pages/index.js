@@ -4,8 +4,7 @@ import {
   Paper,
   InputBase,
   IconButton,
-  Grid,
-  Button
+  Grid
 } from '@material-ui/core'
 
 import { makeStyles } from '@material-ui/core/styles'
@@ -20,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     padding: theme.spacing(0, 2),
-    marginTop: 20
+    marginBottom: 20
   },
   cardGrid: {
     marginTop: 50
