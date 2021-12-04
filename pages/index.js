@@ -5,10 +5,6 @@ import {
   InputBase,
   IconButton,
   Grid,
-  Card,
-  CardMedia,
-  CardContent,
-  CardActions,
   Button
 } from '@material-ui/core'
 
@@ -16,6 +12,8 @@ import { makeStyles } from '@material-ui/core/styles'
 
 import SearchIcon from '@material-ui/icons/search'
 import TemplateDefault from '../src/templates/Default.js'
+
+import Card from '../src/components/Card'
 
 const useStyles = makeStyles((theme) => ({
   searchBox: {
@@ -60,16 +58,6 @@ const Home = () => {
               image={'https://source.unsplash.com/random'}
               title="Produto X"
               subtitle="R$ 60,00"
-              actions={
-                <>
-                  <Button size="small" color="primary">
-                  Editar
-                  </Button>
-                  <Button size="small" color="primary">
-                    Remover
-                  </Button>
-                </>
-              }
             />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
@@ -77,16 +65,6 @@ const Home = () => {
               image={'https://source.unsplash.com/random'}
               title="Produto X"
               subtitle="R$ 60,00"
-              actions={
-                <>
-                  <Button size="small" color="primary">
-                  Editar
-                  </Button>
-                  <Button size="small" color="primary">
-                    Remover
-                  </Button>
-                </>
-              }
             />
           </Grid> 
           <Grid item xs={12} sm={6} md={4}>
@@ -94,16 +72,6 @@ const Home = () => {
               image={'https://source.unsplash.com/random'}
               title="Produto X"
               subtitle="R$ 60,00"
-              actions={
-                <>
-                  <Button size="small" color="primary">
-                  Editar
-                  </Button>
-                  <Button size="small" color="primary">
-                    Remover
-                  </Button>
-                </>
-              }
             />
           </Grid> 
           <Grid item xs={12} sm={6} md={4}>
@@ -111,16 +79,6 @@ const Home = () => {
                 image={'https://source.unsplash.com/random'}
                 title="Produto X"
                 subtitle="R$ 60,00"
-                actions={
-                  <>
-                    <Button size="small" color="primary">
-                    Editar
-                    </Button>
-                    <Button size="small" color="primary">
-                      Remover
-                    </Button>
-                  </>
-                }
               />
           </Grid>   
         </Grid>
