@@ -16,19 +16,11 @@ export default function MyApp(props) {
         <title>marketX</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
-<<<<<<< HEAD
       <ThemeProvider theme={theme}>      
           <ToastyProvider>
             <CssBaseline />
             <Component {...pageProps} />    
           </ToastyProvider> 
-=======
-      <ThemeProvider theme={theme}>
-        <ToastyProvider>
-          <CssBaseline />
-          <Component {...pageProps} />
-        </ToastyProvider>
->>>>>>> 7886bfda622e5b3966ba201091c97c36110458f3
       </ThemeProvider>
     </React.Fragment>
   );

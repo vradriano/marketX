@@ -15,11 +15,7 @@ import {
 } from '@material-ui/core'
 
 import TemplateDefault from '../../../src/templates/Default'
-<<<<<<< HEAD
 import { initialValues, validationSchema } from './formValues'
-=======
-import { initialValues, validationSchema } from './formValues.js'
->>>>>>> 7886bfda622e5b3966ba201091c97c36110458f3
 import useToasty from '../../../src/contexts/Toasty'
 import useStyles from './styles'
 
@@ -123,14 +119,9 @@ const Signup = () => {
                     </FormControl>
                     {
                       isSubmitting 
-<<<<<<< HEAD
                       ? (
                         <CircularProgress className={classes.loading} />
                       ) : (
-=======
-                      ? <CircularProgress className={classes.loading} />
-                      : (
->>>>>>> 7886bfda622e5b3966ba201091c97c36110458f3
                         <Button 
                           type="submit"
                           fullWidth
