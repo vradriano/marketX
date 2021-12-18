@@ -7,7 +7,11 @@ export const ToastyProvider = ({ children }) => {
   const [toasty, setToasty] = useState({
     open: false,
     text: '',
+<<<<<<< HEAD
     severity: 'info', 
+=======
+    severity: 'info',
+>>>>>>> 7886bfda622e5b3966ba201091c97c36110458f3
   })
 
   return (
