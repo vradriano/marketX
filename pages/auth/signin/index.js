@@ -1,6 +1,7 @@
 import { Formik } from 'formik'
 import axios from 'axios'
 import { useRouter } from 'next/router'
+import { signIn } from 'next-auth/client'
 
 import {
   Box,
@@ -18,13 +19,21 @@ import TemplateDefault from '../../../src/templates/Default'
 import { initialValues, validationSchema } from './formValues'
 import useToasty from '../../../src/contexts/Toasty'
 import useStyles from './styles'
+import { Alert } from '@material-ui/lab'
 
 const Signin = () => {
   const classes = useStyles()
   const router = useRouter()
   const { setToasty } = useToasty()
 
-  const handleFormSubmit = async values => {
+
+  
+  const handleFormSubmit = values => {
+    signIn('credentials', {
+      email: values.email,
+      password: values.password,
+      callbackUrl: 'http://localhost:3000/user/dashboard'
+    })
   }
 
   return (
@@ -52,7 +61,16 @@ const Signin = () => {
                 handleSubmit
               }) => {
                 return (
-                  <form onSubmit={handleSubmit}>               
+                  <form onSubmit={handleSubmit}>
+                    {
+                      router.query.i === '1'
+                      ? (
+                        <Alert severity="error" className={classes.errorMessage}>
+                          Usuário não encontrado!
+                        </Alert>
+                      ) :   
+                        null
+                    }               
                     <FormControl fullWidth error={errors.email && touched.email} className={classes.formControl}>
                       <InputLabel>E-mail</InputLabel>
                       <Input
