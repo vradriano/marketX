@@ -1,4 +1,5 @@
 import { Formik } from 'formik'
+import Image from 'next/image'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import { signIn } from 'next-auth/client'
@@ -27,6 +28,11 @@ const Signin = () => {
   const { setToasty } = useToasty()
 
 
+  const handleGoogleLogin = () => {
+    signIn('google', {
+      callbackUrl: 'http://localhost:3000/user/dashboard'
+    })
+  }
   
   const handleFormSubmit = values => {
     signIn('credentials', {
@@ -35,6 +41,7 @@ const Signin = () => {
       callbackUrl: 'http://localhost:3000/user/dashboard'
     })
   }
+
 
   return (
     <TemplateDefault> 
@@ -46,6 +53,29 @@ const Signin = () => {
 
       <Container maxWidth="md">
         <Box className={classes.box}>
+
+          <Box display="flex" justifyContent="center">
+            <Button
+            color="primary"
+            variant="contained"
+            onClick={handleGoogleLogin}
+            startIcon={
+              <Image
+                src="/images/logo_google.svg" 
+                alt="Logo Google" 
+                width={20} 
+                height={20}
+              />
+            }
+            >
+            ENTRAR COM GOOGLE
+            </Button>
+          </Box>
+
+          <Box className={classes.orSeparator}>
+            <span>Ou</span>
+          </Box>
+
           <Formik
             initialValues={initialValues}     
             validationSchema={validationSchema}
