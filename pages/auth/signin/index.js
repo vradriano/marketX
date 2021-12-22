@@ -156,10 +156,10 @@ const Signin = ({ APP_URL }) => {
 
 }
 
-Signin.getServerSideProps = async function(){
-  return {
-    APP_URL: process.env.APP_URL
+  Signin.getServerSideProps = async function(){
+    return {
+      APP_URL: process.env.APP_URL
+    }
   }
-}
 
 export default Signin
