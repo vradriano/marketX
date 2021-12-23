@@ -46,7 +46,7 @@ export default NextAuth({
       session.userId = user.uid
       return session
     }
-  }
+  },
 
   database: process.env.MONGODB_URI
 })

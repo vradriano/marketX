@@ -1,5 +1,6 @@
 import { Formik } from 'formik'
 import { useRouter } from 'next/router'
+import { getSession } from 'next-auth/client'
 import axios from 'axios'
 
 import {
@@ -260,7 +261,7 @@ const Publish = ({ userId, image }) => {
                   {
                     isSubmitting
                       ? <CircularProgress className={classes.loading} />
-                      : <Button type="submit" variant="container" color="primary">Publicar Anúncio</Button>
+                      : <Button type="submit" variant="contained" color="primary">Publicar Anúncio</Button>
                   }
                   </Box>
                 </Container>
