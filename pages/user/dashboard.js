@@ -13,6 +13,7 @@ import dbConnect from '../../src/utils/dbConnect'
 import ProductsModel from '../../src/models/products'
 import TemplateDefault from '../../src/templates/Default.js'
 import Card from '../../src/components/Card'
+import { formatCurrency } from '../../src/utils/currency'
 
 const useStyles = makeStyles((theme) => ({
   buttonadd: {
@@ -45,11 +46,11 @@ const Home = ({ products }) => {
             <Card
               image={`/uploads/${product.files[0].name}`}
               title={product.title}
-              subtitle={product.price}
+              subtitle={formatCurrency(product.price)}
               actions={
                 <>
                   <Button size="small" color="primary">
-                  Editar
+                    Editar
                   </Button>
                   <Button size="small" color="primary">
                     Remover
@@ -68,7 +69,7 @@ const Home = ({ products }) => {
 
 Home.requireAuth = true
 
-export async function getServerSideProps({ req}){
+export async function getServerSideProps({ req }){
   const session = await getSession({ req })
   await dbConnect()
 

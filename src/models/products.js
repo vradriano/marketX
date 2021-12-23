@@ -35,4 +35,6 @@ const schema = new mongoose.Schema({
   }
 })
 
-export default mongoose.model.users || mongoose.model('products', schema)
+mongoose.models = {}
+
+export default mongoose.model.user || mongoose.model('products', schema)

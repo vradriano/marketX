@@ -150,7 +150,9 @@ const Publish = ({ userId, image }) => {
                     </Select>
                     <FormHelperText>
                       {
-                        errors.category && touched.category ? errors.category : null
+                        errors.category && touched.category 
+                        ? errors.category 
+                        : null
                       }
                     </FormHelperText>
                   </FormControl>
@@ -201,7 +203,9 @@ const Publish = ({ userId, image }) => {
                       />
                       <FormHelperText>
                         { 
-                        errors.price && touched.price ? errors.price : null
+                        errors.price && touched.price 
+                        ? errors.price 
+                        : null
                         }
                       </FormHelperText>
                     </FormControl>
