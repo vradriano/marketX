@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import slugify from 'slugify'
+import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 
 import {
@@ -33,7 +35,15 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const Home = ({ products }) => {
+  const router = useRouter()
   const classes = useStyles()
+  const [search, setSearch] = useState()
+
+  const handleSubmitSearch = () => {
+    router.push({
+      pathname: `/search/${search}`
+    })
+  }
 
   return (
     <TemplateDefault>
@@ -43,10 +53,11 @@ const Home = ({ products }) => {
         </Typography>
         <Paper className={classes.searchBox}>
           <InputBase
+          onChange={(e) => setSearch(e.target.value)}
           placeholder="Ex.: IPhone 12 com garantia"
           fullWidth
           />
-          <IconButton>
+          <IconButton onClick={handleSubmitSearch}>
             <SearchIcon />
           </IconButton>
         </Paper>
