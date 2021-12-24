@@ -68,7 +68,7 @@ const Publish = ({ userId, image }) => {
         formData.append(field, values[field])
       } 
     }
-    axios.post('/api/products', formData)
+    axios.post('/api/products/add', formData)
       .then(handleSuccess)
       .catch(handleError)
   }
