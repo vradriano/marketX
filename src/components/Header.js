@@ -47,9 +47,14 @@ export default function ButtonAppBar() {
       <AppBar position="static" elevation={3}>
         <Container maxWidth="lg">
           <Toolbar>
+            <Link href={'/'} passHref>
+            <a>
             <Typography variant="h6" className={classes.title}>
               MarketX
             </Typography>
+            </a>
+            </Link>
+
             <Link href={ session ? '/user/publish' : '/auth/signin' } passHref>
               <Button color="inherit" variant="outlined" className={classes.headButton}>
               Anunciar e Vender

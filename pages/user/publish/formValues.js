@@ -8,6 +8,7 @@ const initialValues = {
   email: '',
   name: '',
   phone: '',
+  local: '',
   files: [],
 }
 
@@ -26,7 +27,8 @@ const validationSchema  = yup.object().shape({
   price: yup.number().required('campo obrigatório'),
   email: yup.string().email('Digite um email válido!').required('Campo obrigatório!'),
   name: yup.string().required('Campo Obrigatório'),
-  phone: yup.number().required('Campo obrigatório'),
+  phone: yup.number().required('Campo Obrigatório'),
+  local: yup.string().required('Campo Obrigatório'),
   files: yup.array().min(1, 'Envie pelo menos uma imagem!').required('Campo Obrigatório!')
 })
 

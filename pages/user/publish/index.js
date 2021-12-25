@@ -220,16 +220,16 @@ const Publish = ({ userId, image }) => {
                     </Typography>
 
                     <FormControl error={errors.name && touched.name} fullWidth>
-                    <InputLabel className={classes.inputLabel}>Nome</InputLabel>
-                    <Input
-                      name="name"
-                      value={values.name}
-                      onChange={handleChange}
-                    />
-                    <FormHelperText>
-                      { errors.name && touched.name ? errors.name : null }
-                    </FormHelperText>
-                  </FormControl>
+                      <InputLabel className={classes.inputLabel}>Nome</InputLabel>
+                      <Input
+                        name="name"
+                        value={values.name}
+                        onChange={handleChange}
+                      />
+                      <FormHelperText>
+                        { errors.name && touched.name ? errors.name : null }
+                      </FormHelperText>
+                    </FormControl>
                       <br />< br/> 
 
                   <FormControl error={errors.email && touched.email} fullWidth>
@@ -257,8 +257,20 @@ const Publish = ({ userId, image }) => {
                     </FormHelperText>
                   </FormControl>
                       <br />< br/>  
-                  </Box>
-                </Container>
+
+                  <FormControl error={errors.local && touched.local} fullWidth>
+                    <InputLabel className={classes.inputLabel}>Endereço</InputLabel>
+                      <Input
+                        name="local"
+                        value={values.local}
+                        onChange={handleChange}
+                      />
+                      <FormHelperText>
+                        { errors.local && touched.local ? errors.local : null }
+                      </FormHelperText>
+                  </FormControl>
+                </Box>
+              </Container>
 
                 <Container maxWidth="md" className={classes.boxContainer}>
                   <Box textAlign="right">

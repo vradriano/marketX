@@ -32,11 +32,12 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 15,
   },
   card: {
-    height:'100%'
+    height: '100%',
   },
   cardMedia: {
-    paddingTop: '56%'
-  }
+    paddingTop: '56%',
+    backgroundSize: 'contain'
+  },
 }))
 
 const Product = ({ product }) => {
@@ -104,7 +105,8 @@ const Product = ({ product }) => {
             </Card>
 
             <Box className={classes.box}>
-              <Typography component="h6" variant="h6">Localização</Typography>
+              <Typography component="h6" variant="h6">Endereço</Typography>
+              <Typography component="body1" variant="body2" >{product.user.local}</Typography>
             </Box>
         
           </Grid>

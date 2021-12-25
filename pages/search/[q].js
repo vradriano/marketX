@@ -116,7 +116,7 @@ export async function getServerSideProps({ query }) {
 
   return {
     props: {
-      products: JSON.parse(JSON.stringify(products))
+      products: JSON.parse(JSON.stringify(products)),
     }
   }
 }

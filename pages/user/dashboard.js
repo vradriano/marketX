@@ -58,7 +58,6 @@ const Home = ({ products }) => {
   }
 
   const handleSuccess = () => {
-    console.log('beleza, deletou')
     setRemovedProducts([...removedProducts, productId])
     setOpenConfirmModal(false)
     setToasty({

@@ -49,7 +49,7 @@ const FileUpload = ({ files, errors, touched, setFieldValue }) => {
         <Box className={classes.dropzone} {...getRootProps()}>
           <input name="files" {...getInputProps()} />
           <Typography variant="body2" color={errors && touched ? 'error' : 'textPrimary'}>
-            Clique para adicionar ou arraste a imagem para aqui
+            Clique para adicionar ou arraste a imagem aqui
           </Typography>
         </Box>
 

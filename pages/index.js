@@ -30,8 +30,8 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 20
   },
   cardGrid: {
-    marginTop: 50
-  }
+    marginTop: 60
+  },
 }))
 
 const Home = ({ products }) => {
@@ -79,6 +79,7 @@ const Home = ({ products }) => {
                   <Link href={`/${category}/${title}/${product._id}`} passHref>
                     <a>
                       <Card
+                        className={classes.imageSize}
                         image={`/uploads/${product.files[0].name}`}
                         title={product.title}
                         subtitle={formatCurrency(product.price)}
