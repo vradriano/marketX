@@ -75,7 +75,10 @@ const Product = ({ product }) => {
             <Box className={classes.box} textAlign="left">
               <Typography component="span" variant="caption">Publicado 16 Junho de 2021 - TO DO</Typography>
               <Typography component="h4" variant="h4" className={classes.productName}>{product.title}</Typography>
-              <Typography component="h4" variant="h4" className={classes.price}>{formatCurrency(product.price)}</Typography>
+              <Typography component="h4" variant="h4" className={classes.price}>{new Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL',
+                }).format(product.price)}</Typography>
               <Chip label={product.category} />
             </Box>
 

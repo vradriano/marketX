@@ -14,7 +14,7 @@ import {
 } from '@material-ui/core'
 
 import { makeStyles } from '@material-ui/core/styles'
-import SearchIcon from '@material-ui/icons/search'
+import SearchIcon from '@material-ui/icons/Search'
 import TemplateDefault from '../src/templates/Default.js'
 import Card from '../src/components/Card'
 import dbConnect from '../src/utils/dbConnect'
@@ -82,7 +82,10 @@ const Home = ({ products }) => {
                         className={classes.imageSize}
                         image={`/uploads/${product.files[0].name}`}
                         title={product.title}
-                        subtitle={formatCurrency(product.price)}
+                        subtitle={new Intl.NumberFormat('pt-BR', {
+                          style: 'currency',
+                          currency: 'BRL',
+                        }).format(product.price)}
                       />
                     </a>
                   </Link>
